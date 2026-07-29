@@ -1,3 +1,4 @@
+import Link from "next/link";
 import {
   LayoutDashboard,
   Boxes,
@@ -48,13 +49,18 @@ export function Sidebar() {
           const Icon = item.icon;
 
           return (
-            <div
+            <Link
               key={item.name}
+              href={
+                item.name === "Dashboard"
+                  ? "/dashboard"
+                  : "#"
+              }
               className="flex items-center gap-3 rounded-lg px-3 py-2 text-sm hover:bg-muted"
             >
               <Icon className="h-4 w-4" />
               {item.name}
-            </div>
+            </Link>
           );
         })}
       </nav>
