@@ -1,6 +1,9 @@
 import { StatCard } from "@/components/dashboard/stat-card";
+import { getClusterStatus } from "@/lib/api/cluster";
 
-export default function DashboardPage() {
+export default async function DashboardPage() {
+  const cluster = await getClusterStatus();
+
   return (
     <div className="space-y-6">
       <div>
@@ -16,23 +19,33 @@ export default function DashboardPage() {
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         <StatCard
           title="Nodes"
-          value={1}
+          value={cluster.nodes}
         />
 
         <StatCard
           title="Pods"
-          value={12}
+          value={cluster.pods}
         />
 
         <StatCard
           title="Services"
-          value={8}
+          value={cluster.services}
         />
 
         <StatCard
           title="Certificates"
-          value={5}
+          value={cluster.certificates}
         />
+      </div>
+
+      <div className="rounded-lg border p-4">
+        <p>
+          Cluster version: {cluster.version}
+        </p>
+
+        <p>
+          Status: {cluster.health}
+        </p>
       </div>
     </div>
   );
