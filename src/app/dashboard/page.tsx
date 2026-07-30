@@ -38,8 +38,8 @@ export default async function DashboardPage() {
         />
 
         <StatCard
-          title="Certificates"
-          value={cluster.certificates}
+          title="Namespaces"
+          value={cluster.namespaces}
         />
       </div>
 
@@ -47,10 +47,6 @@ export default async function DashboardPage() {
         <h2 className="text-xl font-semibold">
           Cluster status
         </h2>
-
-        <p className="mt-2">
-          Version: {cluster.version}
-        </p>
 
         <p>
           Health: {cluster.health}
