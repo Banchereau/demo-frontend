@@ -1,8 +1,13 @@
 import { StatCard } from "@/components/dashboard/stat-card";
 import { getClusterStatus } from "@/lib/api/cluster";
+import { getBackendStatus } from "@/lib/api/backend";
 
 export default async function DashboardPage() {
-  const cluster = await getClusterStatus();
+  const [cluster, backend] = await Promise.all([
+    getClusterStatus(),
+    getBackendStatus(),
+  ]);
+
 
   return (
     <div className="space-y-6">
@@ -39,12 +44,38 @@ export default async function DashboardPage() {
       </div>
 
       <div className="rounded-lg border p-4">
-        <p>
-          Cluster version: {cluster.version}
+        <h2 className="text-xl font-semibold">
+          Cluster status
+        </h2>
+
+        <p className="mt-2">
+          Version: {cluster.version}
         </p>
 
         <p>
-          Status: {cluster.health}
+          Health: {cluster.health}
+        </p>
+      </div>
+
+      <div className="rounded-lg border p-4">
+        <h2 className="text-xl font-semibold">
+          Backend API
+        </h2>
+
+        <p className="mt-2">
+          Application: {backend.application}
+        </p>
+
+        <p>
+          Status: {backend.status}
+        </p>
+
+        <p>
+          Version: {backend.version}
+        </p>
+
+        <p>
+          Message: {backend.message}
         </p>
       </div>
     </div>
