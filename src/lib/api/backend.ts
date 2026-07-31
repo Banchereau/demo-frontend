@@ -1,9 +1,8 @@
 import { BackendStatus } from "@/types/backend";
-
-const BACKEND_URL = "https://api.xcodewhisperer.fr";
+import { config } from "@/lib/config";
 
 export async function getBackendStatus(): Promise<BackendStatus> {
-  const response = await fetch(BACKEND_URL, {
+  const response = await fetch(config.backendApi, {
     cache: "no-store",
   });
 

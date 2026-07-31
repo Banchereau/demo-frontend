@@ -1,20 +1,13 @@
 import { ClusterStatus } from "@/types/cluster";
-
-const BACKEND_URL =
-  "http://demo-backend.default.svc.cluster.local/cluster";
+import { config } from "@/lib/config";
 
 export async function getClusterStatus(): Promise<ClusterStatus> {
-  const response = await fetch(
-    BACKEND_URL,
-    {
-      cache: "no-store",
-    }
-  );
+  const response = await fetch(config.clusterApi, {
+    cache: "no-store",
+  });
 
   if (!response.ok) {
-    throw new Error(
-      "Cluster API unavailable"
-    );
+    throw new Error("Cluster API unavailable");
   }
 
   return response.json();
