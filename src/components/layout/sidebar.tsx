@@ -54,6 +54,8 @@ export function Sidebar() {
               href={
                 item.name === "Dashboard"
                   ? "/dashboard"
+                  : item.name === "Pods"
+                  ? "/pods"
                   : "#"
               }
               className="flex items-center gap-3 rounded-lg px-3 py-2 text-sm hover:bg-muted"

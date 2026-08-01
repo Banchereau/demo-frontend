@@ -2,12 +2,14 @@ export type PodStatus =
   | "Running"
   | "Pending"
   | "Failed"
+  | "Succeeded"
   | "Unknown";
 
-export interface KubernetesPod {
+export interface Pod {
   name: string;
   namespace: string;
   status: PodStatus;
-  cpu: string;
-  memory: string;
+  restarts: number;
+  node: string;
+  age: string;
 }
