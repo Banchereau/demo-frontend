@@ -3,6 +3,7 @@ import {
   LayoutDashboard,
   Boxes,
   Network,
+  Layers,
   ShieldCheck,
   Activity,
   Settings,
@@ -23,6 +24,11 @@ const navigation = [
     name: "Services",
     href: "/services",
     icon: Network,
+  },
+  {
+    name: "Deployments",
+    href: "/deployments",
+    icon: Layers,
   },
   {
     name: "Certificates",
