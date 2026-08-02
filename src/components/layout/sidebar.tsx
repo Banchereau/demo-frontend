@@ -11,26 +11,32 @@ import {
 const navigation = [
   {
     name: "Dashboard",
+    href: "/dashboard",
     icon: LayoutDashboard,
   },
   {
     name: "Pods",
+    href: "/pods",
     icon: Boxes,
   },
   {
     name: "Services",
+    href: "/services",
     icon: Network,
   },
   {
     name: "Certificates",
+    href: "/certificates",
     icon: ShieldCheck,
   },
   {
     name: "Monitoring",
+    href: "/monitoring",
     icon: Activity,
   },
   {
     name: "Settings",
+    href: "/settings",
     icon: Settings,
   },
 ];
@@ -51,13 +57,7 @@ export function Sidebar() {
           return (
             <Link
               key={item.name}
-              href={
-                item.name === "Dashboard"
-                  ? "/dashboard"
-                  : item.name === "Pods"
-                  ? "/pods"
-                  : "#"
-              }
+              href={item.href}
               className="flex items-center gap-3 rounded-lg px-3 py-2 text-sm hover:bg-muted"
             >
               <Icon className="h-4 w-4" />
