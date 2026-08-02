@@ -31,6 +31,11 @@ const navigation = [
     icon: Layers,
   },
   {
+    title: "Namespaces",
+    href: "/namespaces",
+    icon: Boxes,
+  },
+  {
     name: "Certificates",
     href: "/certificates",
     icon: ShieldCheck,
