@@ -1,8 +1,8 @@
 import { KubernetesService } from "@/types/service";
 
 const BACKEND_URL =
-  process.env.NEXT_PUBLIC_BACKEND_API ??
-  "http://localhost:8000";
+  process.env.BACKEND_API ??
+  "http://demo-backend.default.svc.cluster.local";
 
 export async function getServices(): Promise<KubernetesService[]> {
   const response = await fetch(
