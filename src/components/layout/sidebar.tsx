@@ -7,6 +7,7 @@ import {
   ShieldCheck,
   Activity,
   Settings,
+  History,
 } from "lucide-react";
 
 const navigation = [
@@ -34,6 +35,11 @@ const navigation = [
     name: "Namespaces",
     href: "/namespaces",
     icon: Boxes,
+  },
+  {
+    name: "Events",
+    href: "/events",
+    icon: History,
   },
   {
     name: "Certificates",
