@@ -1,4 +1,4 @@
-import { Event } from "@/types/event";
+import { KubernetesEvent } from "@/types/event";
 import { config } from "@/lib/config";
 
 const EVENTS_API = config.clusterApi.replace(
@@ -6,7 +6,7 @@ const EVENTS_API = config.clusterApi.replace(
   "/events"
 );
 
-export async function getEvents(): Promise<Event[]> {
+export async function getEvents(): Promise<KubernetesEvent[]> {
   const response = await fetch(EVENTS_API, {
     cache: "no-store",
   });
