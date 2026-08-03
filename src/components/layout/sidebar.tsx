@@ -31,7 +31,7 @@ const navigation = [
     icon: Layers,
   },
   {
-    title: "Namespaces",
+    name: "Namespaces",
     href: "/namespaces",
     icon: Boxes,
   },
