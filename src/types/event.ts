@@ -7,3 +7,9 @@ export interface KubernetesEvent {
   involved_object: string;
   timestamp: string;
 }
+
+export interface EventFilters {
+  namespace?: string;
+  type?: string;
+  limit?: number;
+}
