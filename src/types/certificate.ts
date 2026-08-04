@@ -1,12 +1,10 @@
-export type CertificateStatus =
-  | "Ready"
-  | "Pending"
-  | "Failed";
-
 export interface KubernetesCertificate {
-  name: string;
   namespace: string;
+  name: string;
+  secret_name: string;
+  dns_names: string[];
   issuer: string;
-  status: CertificateStatus;
-  expirationDate: string;
+  ready: boolean;
+  status: string;
+  not_after: string;
 }

@@ -7,4 +7,5 @@ export const api = {
   services: `${config.backendApi}/services`,
   deployments: `${config.backendApi}/deployments`,
   namespaces: `${config.backendApi}/namespaces`,
+  certificates: `${config.backendApi}/certificates`,
 };
