@@ -8,6 +8,7 @@ import {
   Activity,
   Settings,
   History,
+  Route,
 } from "lucide-react";
 
 const navigation = [
@@ -46,6 +47,12 @@ const navigation = [
     href: "/certificates",
     icon: ShieldCheck,
   },
+  {
+    name: "Ingresses",
+    href: "/ingresses",
+    icon: Route,
+  },
+
   {
     name: "Monitoring",
     href: "/monitoring",
