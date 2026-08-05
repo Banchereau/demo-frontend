@@ -9,6 +9,7 @@ import {
   Settings,
   History,
   Route,
+  AppWindow,
 } from "lucide-react";
 
 const navigation = [
@@ -52,7 +53,11 @@ const navigation = [
     href: "/ingresses",
     icon: Route,
   },
-
+  {
+    name: "Applications",
+    href: "/applications",
+    icon: AppWindow,
+  },
   {
     name: "Monitoring",
     href: "/monitoring",
