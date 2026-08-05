@@ -1,3 +1,4 @@
+import { ApplicationStatusBadge } from "./application-status-badge";
 import type { KubernetesApplication } from "@/types/application";
 
 
@@ -94,6 +95,9 @@ export function ApplicationTable({
               <td className="p-3">
 
                 {application.status}
+                <ApplicationStatusBadge
+                  status={application.status}
+                />
 
               </td>
 
