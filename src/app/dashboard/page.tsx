@@ -9,6 +9,17 @@ import { getDeployments } from "@/lib/api/deployments";
 import { getCertificates } from "@/lib/api/certificates";
 import { getIngresses } from "@/lib/api/ingresses";
 
+import {
+  Server,
+  Boxes,
+  Network,
+  Layers,
+  Rocket,
+  GitBranch,
+  ShieldCheck,
+  Route,
+} from "lucide-react";
+
 export default async function DashboardPage() {
   const [
     cluster,
@@ -49,41 +60,59 @@ export default async function DashboardPage() {
         <StatCard
           title="Nodes"
           value={cluster.nodes}
+          icon={Server}
+          description="Kubernetes worker nodes"
         />
 
         <StatCard
           title="Pods"
           value={cluster.pods}
+          icon={Boxes}
+          description="Running workloads"
         />
 
         <StatCard
           title="Services"
           value={cluster.services}
+          icon={Network}
+          description="Internal Kubernetes services"
         />
 
         <StatCard
           title="Namespaces"
           value={cluster.namespaces}
+          icon={Layers}
+          description="Logical environments"
         />
 
         <StatCard
           title="Applications"
           value={applications.length}
+          icon={Rocket}
+          description="Discovered applications"
         />
 
         <StatCard
           title="Deployments"
           value={deployments.length}
+          icon={GitBranch}
+          description="Managed workloads"
         />
 
         <StatCard
           title="Certificates"
           value={certificates.length}
+          icon={ShieldCheck}
+          status="Ready"
+          description="TLS certificates"
         />
 
         <StatCard
           title="Ingresses"
           value={ingresses.length}
+          icon={Route}
+          status="Active"
+          description="External routes"
         />
       </div>
 
