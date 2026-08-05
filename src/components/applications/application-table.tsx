@@ -94,7 +94,6 @@ export function ApplicationTable({
 
               <td className="p-3">
 
-                {application.status}
                 <ApplicationStatusBadge
                   status={application.status}
                 />
