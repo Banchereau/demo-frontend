@@ -21,7 +21,7 @@ export function PodTable({
 
 
   return (
-    <Card>
+    <Card className="round-md border">
 
       <CardHeader>
         <CardTitle>
@@ -38,7 +38,7 @@ export function PodTable({
 
             <div
               key={pod.name}
-              className="border rounded p-3"
+              className="border rounded-md p-3"
             >
 
               <p className="font-medium">

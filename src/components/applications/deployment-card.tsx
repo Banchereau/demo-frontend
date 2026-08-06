@@ -25,7 +25,7 @@ export function DeploymentCard({
 
 
   return (
-    <Card>
+    <Card className="round-md border">
 
       <CardHeader>
         <CardTitle>

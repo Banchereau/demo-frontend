@@ -25,7 +25,7 @@ export function ServiceCard({
 
 
   return (
-    <Card>
+    <Card className="round-md border">
 
       <CardHeader>
         <CardTitle>

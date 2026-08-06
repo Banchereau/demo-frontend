@@ -8,9 +8,9 @@ export default async function ApplicationsPage() {
 
 
   return (
-    <main className="p-6">
+    <main className="space-y-6">
 
-      <h1 className="text-2xl font-bold mb-6">
+      <h1 className="text-3xl font-bold mb-6">
         Kubernetes Applications
       </h1>
 

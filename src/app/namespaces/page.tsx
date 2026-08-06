@@ -8,7 +8,7 @@ export default async function NamespacesPage() {
   return (
     <div className="space-y-6">
 
-      <h1 className="text-2xl font-bold">
+      <h1 className="text-3xl font-bold">
         Kubernetes Namespaces
       </h1>
 
@@ -16,14 +16,14 @@ export default async function NamespacesPage() {
 
         <table className="w-full">
 
-          <thead>
+          <thead className="border-b bg-muted">
             <tr className="border-b text-left">
 
-              <th className="p-3">
+              <th className="px-4 py-3">
                 Namespace
               </th>
 
-              <th className="p-3">
+              <th className="px-4 py-3">
                 Status
               </th>
 
@@ -41,11 +41,11 @@ export default async function NamespacesPage() {
                 className="border-b"
               >
 
-                <td className="p-3">
+                <td className="px-4 py-3">
                   {namespace.name}
                 </td>
 
-                <td className="p-3">
+                <td className="px-4 py-3">
                   {namespace.status}
                 </td>
 

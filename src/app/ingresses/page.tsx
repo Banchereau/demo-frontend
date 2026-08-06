@@ -8,7 +8,7 @@ export default async function IngressesPage() {
     <div className="space-y-6">
 
       <div>
-        <h1 className="text-2xl font-bold">
+        <h1 className="text-3xl font-bold">
           Kubernetes Ingresses
         </h1>
 

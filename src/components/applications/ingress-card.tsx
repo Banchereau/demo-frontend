@@ -25,7 +25,7 @@ export function IngressCard({
 
 
   return (
-    <Card>
+    <Card className="round-md border">
 
       <CardHeader>
         <CardTitle>

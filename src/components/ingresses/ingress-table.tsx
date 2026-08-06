@@ -12,7 +12,7 @@ export function IngressTable({
 
       <table className="w-full text-sm">
 
-        <thead>
+        <thead className="border-b bg-muted">
           <tr className="border-b">
             <th className="p-3 text-left">
               Namespace

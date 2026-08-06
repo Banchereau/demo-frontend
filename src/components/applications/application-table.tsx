@@ -18,34 +18,34 @@ export function ApplicationTable({
 
       <table className="w-full text-sm">
 
-        <thead>
+        <thead className="border-b bg-muted">
           <tr className="border-b">
 
-            <th className="p-3 text-left">
+            <th className="px-4 py-3 text-left">
               Namespace
             </th>
 
-            <th className="p-3 text-left">
+            <th className="px-4 py-3 text-left">
               Application
             </th>
 
-            <th className="p-3 text-left">
+            <th className="px-4 py-3 text-left">
               Deployment
             </th>
 
-            <th className="p-3 text-left">
+            <th className="px-4 py-3 text-left">
               Service
             </th>
 
-            <th className="p-3 text-left">
+            <th className="px-4 py-3 text-left">
               Hosts
             </th>
 
-            <th className="p-3 text-left">
+            <th className="px-4 py-3 text-left">
               Replicas
             </th>
 
-            <th className="p-3 text-left">
+            <th className="px-4 py-3 text-left">
               Status
             </th>
 
@@ -62,12 +62,12 @@ export function ApplicationTable({
               className="border-b"
             >
 
-              <td className="p-3">
+              <td className="px-4 py-3">
                 {application.namespace}
               </td>
 
 
-              <td className="p-3 font-medium">
+              <td className="px-4 py-3 font-medium">
                 <Link
                   href={`/applications/${application.namespace}/${application.name}`}
                   className="font-medium text-blue-600 hover:text-blue-800 hover:underline"
@@ -77,29 +77,29 @@ export function ApplicationTable({
               </td>
 
 
-              <td className="p-3">
+              <td className="px-4 py-3">
                 {application.deployment}
               </td>
 
 
-              <td className="p-3">
+              <td className="px-4 py-3">
                 {application.service ?? "-"}
               </td>
 
 
-              <td className="p-3">
+              <td className="px-4 py-3">
                 {application.hosts.join(", ") || "-"}
               </td>
 
 
-              <td className="p-3">
+              <td className="px-4 py-3">
                 {application.ready_replicas}
                 /
                 {application.desired_replicas}
               </td>
 
 
-              <td className="p-3">
+              <td className="px-4 py-3">
 
                 <ApplicationStatusBadge
                   status={application.status}

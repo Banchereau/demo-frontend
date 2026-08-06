@@ -4,14 +4,14 @@ export default async function ServicesPage() {
   const services = await getServices();
 
   return (
-    <main className="p-6">
-      <h1 className="text-2xl font-bold mb-6">
+    <div className="space-y-6">
+      <h1 className="text-3xl font-bold mb-6">
         Kubernetes Services
       </h1>
 
-      <div className="overflow-x-auto">
+      <div className="overflow-x-auto rounded-lg border">
         <table className="w-full border">
-          <thead>
+          <thead className="border-b bg-muted">
             <tr className="border-b">
               <th className="p-2 text-left">
                 Namespace
@@ -61,6 +61,6 @@ export default async function ServicesPage() {
           </tbody>
         </table>
       </div>
-    </main>
+    </div>
   );
 }
