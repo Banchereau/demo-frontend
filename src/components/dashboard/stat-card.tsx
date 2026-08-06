@@ -22,7 +22,7 @@ export function StatCard({
 }: StatCardProps) {
 
   return (
-    <Card>
+    <Card className="border">
 
       <CardHeader className="flex flex-row items-center justify-between">
 

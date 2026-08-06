@@ -54,7 +54,7 @@ export function PlatformHealth({
   health,
 }: PlatformHealthProps) {
   return (
-    <Card>
+    <Card className="border">
       <CardHeader>
         <CardTitle className="flex items-center justify-between">
           <span>
