@@ -33,7 +33,7 @@ export default async function ApplicationDetailPage({
 
 
   return (
-    <main className="p-6 space-y-6">
+    <main className="space-y-6">
 
       <ApplicationHeader
         application={application}
