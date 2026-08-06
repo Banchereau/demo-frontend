@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { ApplicationStatusBadge } from "./application-status-badge";
 import type { KubernetesApplication } from "@/types/application";
 
@@ -66,7 +68,12 @@ export function ApplicationTable({
 
 
               <td className="p-3 font-medium">
-                {application.name}
+                <Link
+                  href={`/applications/${application.namespace}/${application.name}`}
+                  className="font-medium text-blue-600 hover:text-blue-800 hover:underline"
+                >
+                  {application.name}
+                </Link>
               </td>
 
 
