@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { getPods } from "@/lib/api/pods";
 
 export default async function PodsPage() {
@@ -42,6 +44,10 @@ export default async function PodsPage() {
               <th className="px-4 py-3 text-left">
                 Age
               </th>
+
+              <th className="px-4 py-3 text-left">
+                Actions
+              </th>
             </tr>
           </thead>
 
@@ -73,6 +79,15 @@ export default async function PodsPage() {
 
                 <td className="px-4 py-3">
                   {pod.age}
+                </td>
+
+                <td className="px-4 py-3">
+                  <Link
+                    href={`/pods/${pod.namespace}/${pod.name}/logs`}
+                    className="text-blue-500 hover:underline"
+                  >
+                    Logs
+                  </Link>
                 </td>
               </tr>
             ))}

@@ -5,5 +5,5 @@ export const config = {
 
   clusterApi:
     process.env.CLUSTER_API ??
-    "http://demo-backend.default.svc.cluster.local/cluster",
+    "https://api.xcodewhisperer.fr/cluster",
 };
